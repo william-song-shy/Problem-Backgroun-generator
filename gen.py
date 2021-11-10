@@ -15,6 +15,12 @@ def add_person (name :str,time=1):
         suj.append(name)
         obj.append(name)
 
+def delete_person (name:str):
+    global n,suj,obj
+    n = list(filter(lambda x:x!=name,n))
+    suj = list(filter(lambda x:x!=name,suj))
+    obj = list(filter(lambda x:x!=name,obj))
+
 def put_in (matched):
     f=matched.group()
     f=f[1::]
